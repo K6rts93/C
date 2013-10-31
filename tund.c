@@ -1,11 +1,11 @@
 #include <stdio.h>
 #include <math.h>
 
-Double f(double x) {
-	return sin(x) 
+double f(double x) {
+	return cos(x) * cos(x);
 }
 
-double integraal(double x0, double x1, int n, double (*f)double)) {
+double integraal(double x0, double x1, int n, double (*f)(double)) {
 	
 	double a;
 	double b;
@@ -27,11 +27,13 @@ double integraal(double x0, double x1, int n, double (*f)double)) {
 		S += dS;
 	}
 	
-	Return S;
-	
+	return S;
+}
+
 int main(int arc, char*argv[]) {
 	double pindala;
 	pindala = integraal(0, 3.141592/2, 400, f);
 	printf("pindala = %f\n", pindala);
 	return 0;
+	
 }	
